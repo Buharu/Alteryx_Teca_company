@@ -1,0 +1,660 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2024.1" RunE2="T">
+  <Nodes>
+    <Node ToolID="24">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="486" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="0">D:\Coursera\tools-exploratory-data-analysis-business\Files-for-ETL-and-EDA-in-Altyerx\Data and Files Used in Videos\dataForEDA_vb.csv</File>
+          <Passwords />
+          <Disable>False</Disable>
+          <FormatSpecificOptions>
+            <LineEndStyle>CRLF</LineEndStyle>
+            <Delimeter>,</Delimeter>
+            <ForceQuotes>False</ForceQuotes>
+            <HeaderRow>True</HeaderRow>
+            <CodePage>28591</CodePage>
+            <WriteBOM>True</WriteBOM>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>dataForEDA_vb.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="28">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="294" y="18" width="100" height="40" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>This is all data preparetion</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="Lime" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="27">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="282" y="78" width="133" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Join Data</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="True" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Join Data</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="18">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="306" y="126" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="zip" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="zip" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Left_unique_id" selected="True" input="Left_" />
+                    <SelectField field="Left_transaction_id" selected="True" input="Left_" />
+                    <SelectField field="Left_date" selected="True" input="Left_" />
+                    <SelectField field="Left_year" selected="True" input="Left_" />
+                    <SelectField field="Left_month" selected="True" input="Left_" />
+                    <SelectField field="Left_day" selected="True" input="Left_" />
+                    <SelectField field="Left_day_of_the_week" selected="True" input="Left_" />
+                    <SelectField field="Left_quarter" selected="True" input="Left_" />
+                    <SelectField field="Left_customer_id" selected="True" input="Left_" />
+                    <SelectField field="Left_product_id" selected="True" input="Left_" />
+                    <SelectField field="Left_product_name" selected="True" input="Left_" />
+                    <SelectField field="Left_category_id" selected="True" input="Left_" />
+                    <SelectField field="Left_category_name" selected="True" input="Left_" />
+                    <SelectField field="Left_parent_id" selected="True" input="Left_" />
+                    <SelectField field="Left_parent_name" selected="True" input="Left_" />
+                    <SelectField field="Left_product_count" selected="True" input="Left_" />
+                    <SelectField field="Left_site_id" selected="True" input="Left_" />
+                    <SelectField field="Left_site_name" selected="True" input="Left_" />
+                    <SelectField field="Left_address" selected="True" input="Left_" />
+                    <SelectField field="Left_city" selected="True" input="Left_" />
+                    <SelectField field="Left_zip" selected="True" input="Left_" />
+                    <SelectField field="Left_latitude" selected="True" input="Left_" />
+                    <SelectField field="Left_longitude" selected="True" input="Left_" />
+                    <SelectField field="Left_site_status" selected="True" input="Left_" />
+                    <SelectField field="Left_revenue" selected="True" input="Left_" />
+                    <SelectField field="Left_gp_margin" selected="True" input="Left_" />
+                    <SelectField field="Left_gross_profit" selected="True" input="Left_" />
+                    <SelectField field="Left_costs" selected="True" input="Left_" />
+                    <SelectField field="Left_units" selected="True" input="Left_" />
+                    <SelectField field="Left_FileName" selected="True" input="Left_" />
+                    <SelectField field="Left_revenue_Indicator" selected="True" input="Left_" />
+                    <SelectField field="Left_gp_margin_Indicator" selected="True" input="Left_" />
+                    <SelectField field="Left_gross_profit_Indicator" selected="True" input="Left_" />
+                    <SelectField field="Left_costs_Indicator" selected="True" input="Left_" />
+                    <SelectField field="Left_units_Indicator" selected="True" input="Left_" />
+                    <SelectField field="Right_state_province_code" selected="True" input="Right_" />
+                    <SelectField field="Right_zip" selected="False" rename="Right_zip" input="Right_" />
+                    <SelectField field="*Unknown" selected="False" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="22">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+            <Position x="534" y="222" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ByName_ErrorMode>Warning</ByName_ErrorMode>
+              <ByName_OutputMode>All</ByName_OutputMode>
+              <Mode>ByName</Mode>
+              <SetOutputOrder value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="26">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="29" y="100" width="189" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Prepare States Data</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="True" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Prepare States Data</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="15">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="53" y="149" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">D:\Coursera\tools-exploratory-data-analysis-business\Files-for-ETL-and-EDA-in-Altyerx\Data and Files Used in Videos\states.csv</File>
+              <FormatSpecificOptions>
+                <HeaderRow>True</HeaderRow>
+                <IgnoreErrors>False</IgnoreErrors>
+                <AllowShareWrite>False</AllowShareWrite>
+                <ImportLine>1</ImportLine>
+                <FieldLen>254</FieldLen>
+                <SingleThreadRead>False</SingleThreadRead>
+                <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+                <Delimeter>,</Delimeter>
+                <QuoteRecordBreak>False</QuoteRecordBreak>
+                <CodePage>28591</CodePage>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>states.csv</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="postal_code" size="254" source="File: D:\Coursera\tools-exploratory-data-analysis-business\Files-for-ETL-and-EDA-in-Altyerx\Data and Files Used in Videos\states.csv" type="V_String" />
+                <Field name="state_province" size="254" source="File: D:\Coursera\tools-exploratory-data-analysis-business\Files-for-ETL-and-EDA-in-Altyerx\Data and Files Used in Videos\states.csv" type="V_String" />
+                <Field name="state_province_code" size="254" source="File: D:\Coursera\tools-exploratory-data-analysis-business\Files-for-ETL-and-EDA-in-Altyerx\Data and Files Used in Videos\states.csv" type="V_String" />
+                <Field name="country_name" size="254" source="File: D:\Coursera\tools-exploratory-data-analysis-business\Files-for-ETL-and-EDA-in-Altyerx\Data and Files Used in Videos\states.csv" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="17">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="306" y="150" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="Left([postal_code], 5)" field="zip" size="1073741823" type="V_WString" enabled="true" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name>Extract Postal Code</Name>
+              <AnnotationText><![CDATA[zip = Left([postal_code], 5)
+]]></AnnotationText>
+              <DefaultAnnotationText>Extract Postal Code</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="16">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="186" y="150" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="postal_code" selected="True" />
+                <SelectField field="state_province_code" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Keep only postal_code and state_province_code columns</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="25">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="42" y="54" width="179" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Prepare POS Data</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="True" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Prepare POS Data</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="14">
+          <GuiSettings>
+            <Position x="1014" y="102" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="listbox Select Incoming Fields">"revenue","gp_margin","gross_profit","costs","units"</Value>
+              <Value name="radio Null Value">True</Value>
+              <Value name="radio User Specified Replace From Value">False</Value>
+              <Value name="updown User Replace Value">0.00000</Value>
+              <Value name="radio Mean">False</Value>
+              <Value name="radio Median">True</Value>
+              <Value name="radio Mode">False</Value>
+              <Value name="radio User Specified Replace With Value">False</Value>
+              <Value name="updown User Replace With Value">0.00000</Value>
+              <Value name="checkbox Impute Indicator">True</Value>
+              <Value name="checkbox Imputed Values Separate Field">False</Value>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name>Imputation:</Name>
+              <AnnotationText>Replace null values with Median</AnnotationText>
+              <DefaultAnnotationText>Imputation:</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="unique_id" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+                <Field name="transaction_id" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+                <Field name="date" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="Date" />
+                <Field name="year" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="Int16" />
+                <Field name="month" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="Int16" />
+                <Field name="day" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="Int16" />
+                <Field name="day_of_the_week" size="1073741823" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_WString" />
+                <Field name="quarter" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="Int16" />
+                <Field name="customer_id" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+                <Field name="product_id" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+                <Field name="product_name" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+                <Field name="category_id" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+                <Field name="category_name" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+                <Field name="parent_id" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+                <Field name="parent_name" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+                <Field name="product_count" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+                <Field name="site_id" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+                <Field name="site_name" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+                <Field name="address" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+                <Field name="city" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+                <Field name="zip" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+                <Field name="latitude" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+                <Field name="longitude" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+                <Field name="site_status" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+                <Field name="revenue" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="Float" />
+                <Field name="gp_margin" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="Float" />
+                <Field name="gross_profit" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="Float" />
+                <Field name="costs" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="Float" />
+                <Field name="units" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="Float" />
+                <Field name="FileName" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_WString" />
+                <Field name="revenue_Indicator" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="Int16" />
+                <Field name="gp_margin_Indicator" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="Int16" />
+                <Field name="gross_profit_Indicator" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="Int16" />
+                <Field name="costs_Indicator" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="Int16" />
+                <Field name="units_Indicator" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="Int16" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings Macro="Imputation_v3.yxmc" />
+        </Node>
+        <Node ToolID="8">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="870" y="114" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[revenue] &lt;= 88 and [revenue] &gt;= -5</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[revenue] &lt;= 88 and [revenue] &gt;= -5</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="7">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="714" y="114" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="True" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="unique_id" selected="True" />
+                <SelectField field="transaction_id" selected="True" />
+                <SelectField field="unformatted_date" selected="False" />
+                <SelectField field="date" selected="True" />
+                <SelectField field="year" selected="True" />
+                <SelectField field="month" selected="True" />
+                <SelectField field="day" selected="True" />
+                <SelectField field="day_of_the_week" selected="True" />
+                <SelectField field="quarter" selected="True" />
+                <SelectField field="customer_id" selected="True" />
+                <SelectField field="product_id" selected="True" />
+                <SelectField field="product_name" selected="True" />
+                <SelectField field="category_id" selected="True" />
+                <SelectField field="category_name" selected="True" />
+                <SelectField field="parent_id" selected="True" />
+                <SelectField field="parent_name" selected="True" />
+                <SelectField field="product_count" selected="True" />
+                <SelectField field="site_id" selected="True" />
+                <SelectField field="site_name" selected="True" />
+                <SelectField field="address" selected="True" />
+                <SelectField field="city" selected="True" />
+                <SelectField field="zip" selected="True" />
+                <SelectField field="latitude" selected="True" />
+                <SelectField field="longitude" selected="True" />
+                <SelectField field="site_status" selected="True" />
+                <SelectField field="revenue" selected="True" />
+                <SelectField field="gp_margin" selected="True" />
+                <SelectField field="gross_profit" selected="True" />
+                <SelectField field="costs" selected="True" />
+                <SelectField field="units" selected="True" />
+                <SelectField field="FileName" selected="True" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name>Select:</Name>
+              <AnnotationText>Remove unformatted_date column</AnnotationText>
+              <DefaultAnnotationText>Select:</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="6">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="558" y="114" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="DateTimeYear([date])" field="year" size="2" type="Int16" enabled="true" />
+                <FormulaField expression="DateTimeMonth([date])" field="month" size="2" type="Int16" enabled="true" />
+                <FormulaField expression="DateTimeDay([date])" field="day" size="2" type="Int16" enabled="true" />
+                <FormulaField expression="DateTimeFormat([date],&quot;%A&quot;)" field="day_of_the_week" size="1073741823" type="V_WString" enabled="true" />
+                <FormulaField expression="if [month] &lt;= 3 then 1&#xA;elseif [month] &gt; 3 and [month] &lt;= 6 then 2&#xA;elseif [month] &gt; 5 and [month] &lt; 9 then 3&#xA;else 4 endif" field="quarter" size="2" type="Int16" enabled="true" />
+                <FormulaField expression="[gross_profit] / [revenue]" field="gp_margin" size="4" type="Float" enabled="true" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name>Year, month, day, quarter</Name>
+              <AnnotationText>Was extract the year, month, day and quarter  from the date</AnnotationText>
+              <DefaultAnnotationText>year = DateTimeYear([date])
+month = DateTimeMonth([date])
+day = DateTimeDay([dat...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="5">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DateTime.DateTime">
+            <Position x="390" y="114" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <IsFrom value="False" />
+              <InputFieldName>unformatted_date</InputFieldName>
+              <Language>English</Language>
+              <Format>MM/dd/yyyy</Format>
+              <OutputFieldName>date</OutputFieldName>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name>DateTime</Name>
+              <DefaultAnnotationText>Convert unformatted_date From:
+MM/dd/yyyy</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDateTime" />
+        </Node>
+        <Node ToolID="4">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="222" y="114" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="revenue" selected="True" type="Float" size="4" />
+                <SelectField field="gross_profit" selected="True" type="Float" size="4" />
+                <SelectField field="costs" selected="True" type="Float" size="4" />
+                <SelectField field="units" selected="True" type="Float" size="4" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name>Select</Name>
+              <AnnotationText>Used to change data type of revenue</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="2">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="65" y="114" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="Path">D:\Coursera\tools-exploratory-data-analysis-business\Files-for-ETL-and-EDA-in-Altyerx\Data and Files Used in Videos\tecaPosSmall.csv</File>
+              <FormatSpecificOptions>
+                <HeaderRow>True</HeaderRow>
+                <IgnoreErrors>False</IgnoreErrors>
+                <AllowShareWrite>False</AllowShareWrite>
+                <ImportLine>1</ImportLine>
+                <FieldLen>254</FieldLen>
+                <SingleThreadRead>False</SingleThreadRead>
+                <IgnoreQuotes>True</IgnoreQuotes>
+                <Delimeter>,</Delimeter>
+                <QuoteRecordBreak>False</QuoteRecordBreak>
+                <CodePage>28591</CodePage>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name>Input Data</Name>
+              <AnnotationText>tecaPosSmall.csv
+This is the first step</AnnotationText>
+              <DefaultAnnotationText>Input Data</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="unique_id" size="254" source="File: D:\Coursera\tools-exploratory-data-analysis-business\Files-for-ETL-and-EDA-in-Altyerx\Data and Files Used in Videos\tecaPosSmall.csv" type="V_String" />
+                <Field name="transaction_id" size="254" source="File: D:\Coursera\tools-exploratory-data-analysis-business\Files-for-ETL-and-EDA-in-Altyerx\Data and Files Used in Videos\tecaPosSmall.csv" type="V_String" />
+                <Field name="unformatted_date" size="254" source="File: D:\Coursera\tools-exploratory-data-analysis-business\Files-for-ETL-and-EDA-in-Altyerx\Data and Files Used in Videos\tecaPosSmall.csv" type="V_String" />
+                <Field name="customer_id" size="254" source="File: D:\Coursera\tools-exploratory-data-analysis-business\Files-for-ETL-and-EDA-in-Altyerx\Data and Files Used in Videos\tecaPosSmall.csv" type="V_String" />
+                <Field name="product_id" size="254" source="File: D:\Coursera\tools-exploratory-data-analysis-business\Files-for-ETL-and-EDA-in-Altyerx\Data and Files Used in Videos\tecaPosSmall.csv" type="V_String" />
+                <Field name="product_name" size="254" source="File: D:\Coursera\tools-exploratory-data-analysis-business\Files-for-ETL-and-EDA-in-Altyerx\Data and Files Used in Videos\tecaPosSmall.csv" type="V_String" />
+                <Field name="category_id" size="254" source="File: D:\Coursera\tools-exploratory-data-analysis-business\Files-for-ETL-and-EDA-in-Altyerx\Data and Files Used in Videos\tecaPosSmall.csv" type="V_String" />
+                <Field name="category_name" size="254" source="File: D:\Coursera\tools-exploratory-data-analysis-business\Files-for-ETL-and-EDA-in-Altyerx\Data and Files Used in Videos\tecaPosSmall.csv" type="V_String" />
+                <Field name="parent_id" size="254" source="File: D:\Coursera\tools-exploratory-data-analysis-business\Files-for-ETL-and-EDA-in-Altyerx\Data and Files Used in Videos\tecaPosSmall.csv" type="V_String" />
+                <Field name="parent_name" size="254" source="File: D:\Coursera\tools-exploratory-data-analysis-business\Files-for-ETL-and-EDA-in-Altyerx\Data and Files Used in Videos\tecaPosSmall.csv" type="V_String" />
+                <Field name="product_count" size="254" source="File: D:\Coursera\tools-exploratory-data-analysis-business\Files-for-ETL-and-EDA-in-Altyerx\Data and Files Used in Videos\tecaPosSmall.csv" type="V_String" />
+                <Field name="site_id" size="254" source="File: D:\Coursera\tools-exploratory-data-analysis-business\Files-for-ETL-and-EDA-in-Altyerx\Data and Files Used in Videos\tecaPosSmall.csv" type="V_String" />
+                <Field name="site_name" size="254" source="File: D:\Coursera\tools-exploratory-data-analysis-business\Files-for-ETL-and-EDA-in-Altyerx\Data and Files Used in Videos\tecaPosSmall.csv" type="V_String" />
+                <Field name="address" size="254" source="File: D:\Coursera\tools-exploratory-data-analysis-business\Files-for-ETL-and-EDA-in-Altyerx\Data and Files Used in Videos\tecaPosSmall.csv" type="V_String" />
+                <Field name="city" size="254" source="File: D:\Coursera\tools-exploratory-data-analysis-business\Files-for-ETL-and-EDA-in-Altyerx\Data and Files Used in Videos\tecaPosSmall.csv" type="V_String" />
+                <Field name="zip" size="254" source="File: D:\Coursera\tools-exploratory-data-analysis-business\Files-for-ETL-and-EDA-in-Altyerx\Data and Files Used in Videos\tecaPosSmall.csv" type="V_String" />
+                <Field name="latitude" size="254" source="File: D:\Coursera\tools-exploratory-data-analysis-business\Files-for-ETL-and-EDA-in-Altyerx\Data and Files Used in Videos\tecaPosSmall.csv" type="V_String" />
+                <Field name="longitude" size="254" source="File: D:\Coursera\tools-exploratory-data-analysis-business\Files-for-ETL-and-EDA-in-Altyerx\Data and Files Used in Videos\tecaPosSmall.csv" type="V_String" />
+                <Field name="site_status" size="254" source="File: D:\Coursera\tools-exploratory-data-analysis-business\Files-for-ETL-and-EDA-in-Altyerx\Data and Files Used in Videos\tecaPosSmall.csv" type="V_String" />
+                <Field name="revenue" size="254" source="File: D:\Coursera\tools-exploratory-data-analysis-business\Files-for-ETL-and-EDA-in-Altyerx\Data and Files Used in Videos\tecaPosSmall.csv" type="V_String" />
+                <Field name="gross_profit" size="254" source="File: D:\Coursera\tools-exploratory-data-analysis-business\Files-for-ETL-and-EDA-in-Altyerx\Data and Files Used in Videos\tecaPosSmall.csv" type="V_String" />
+                <Field name="costs" size="254" source="File: D:\Coursera\tools-exploratory-data-analysis-business\Files-for-ETL-and-EDA-in-Altyerx\Data and Files Used in Videos\tecaPosSmall.csv" type="V_String" />
+                <Field name="units" size="254" source="File: D:\Coursera\tools-exploratory-data-analysis-business\Files-for-ETL-and-EDA-in-Altyerx\Data and Files Used in Videos\tecaPosSmall.csv" type="V_String" />
+                <Field name="FileName" size="254" source="File: FileName" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection name="#1">
+      <Origin ToolID="18" Connection="Left" />
+      <Destination ToolID="22" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="18" Connection="Join" />
+      <Destination ToolID="22" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="22" Connection="Output" />
+      <Destination ToolID="24" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Output" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="17" Connection="Output" />
+      <Destination ToolID="18" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="Output" />
+      <Destination ToolID="18" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="17" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="True" />
+      <Destination ToolID="14" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="True" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <IsTemplate value="False" />
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>ETL_after_cleaning</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="2797d493-8e50-4417-92cd-0d07b4fa60ca" />
+      <Telemetry>
+        <PreviousWorkflowId value="9ee8bca4-5043-4b1c-8897-fef50125e244" />
+        <OriginWorkflowId value="b7dfa742-7fe1-4e56-8591-5bfcb53b388d" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
