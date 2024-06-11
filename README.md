@@ -1,7 +1,7 @@
 # Alteryx_Teca_company
 <pre> In the project you could find the next 2 workflows:  
   I. ETL (Extract, Transform, Load) workflow where it was included the following steps:  
-    1. Read in Data with (Input Data from In/Out folder)  
+    1. Read in Data ("Input Data" from "In/Out" folder)  
     2. Examine Data Quality  
     3. Dates and Calculated Columns  
     4. Outliers  
